@@ -1,0 +1,2 @@
+module RussiaHelper
+end

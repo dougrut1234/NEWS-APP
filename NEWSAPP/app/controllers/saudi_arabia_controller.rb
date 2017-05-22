@@ -1,0 +1,2 @@
+class SaudiArabiaController < ApplicationController
+end

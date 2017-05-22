@@ -1,0 +1,2 @@
+class RussiaController < ApplicationController
+end

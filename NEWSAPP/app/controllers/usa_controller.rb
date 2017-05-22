@@ -1,0 +1,2 @@
+class UsaController < ApplicationController
+end

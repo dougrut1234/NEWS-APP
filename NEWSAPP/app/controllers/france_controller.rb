@@ -1,0 +1,2 @@
+class FranceController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class VenezuelaController < ApplicationController
+end

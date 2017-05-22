@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  USA: MyString
+  China: MyString
+  France: MyString
+  Russia: MyString
+  Saudia: MyString
+  Venezuela: MyString
+
+two:
+  USA: MyString
+  China: MyString
+  France: MyString
+  Russia: MyString
+  Saudia: MyString
+  Venezuela: MyString
