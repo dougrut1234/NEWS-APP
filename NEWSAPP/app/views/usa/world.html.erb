@@ -18,7 +18,39 @@
 
 <h1 class = "category"> United States: World News </h1>
 
+<!-- CBS  -->
+
+<div class="news-feeds">
+<%= image_tag ('cbs_logo.png'), :class => "news-feed-logo" %>
+
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.cbsnews.com/latest/rss/world',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
+
+
 <!-- CNN widget  -->
+
+<div class="news-feeds">
+<%= image_tag ('cnn-logo.png'), :class => "news-feed-logo" %>
+
 
 <?xml version="1.0"?>
 <?xml-stylesheet href="application.css"?>
@@ -35,11 +67,60 @@
   <h2><%= link_to item.title,item.link  %></h2>
   <p><%= item.pubDate %> </p>
 
-<!-- <ul>
-    <li class="title"><%= puts "Title: #{feed.channel.title}" %></li>
-    <li class="item"><%=  puts "Item: #{item.title}" %></li>
-</ul> -->
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
+
+<!-- NY TIMES -->
+
+<div class="news-feeds">
+<%= image_tag ('nytimes_logo.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://rss.nytimes.com/services/xml/rss/nyt/World.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
 
   <%  end %>
 <%  end %>
 </xml>
+
+</div>
+
+<!-- WSJ -->
+
+<div class="news-feeds">
+<%= image_tag ('wsj-logo.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.wsj.com/xml/rss/3_7085.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>

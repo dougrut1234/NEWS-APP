@@ -15,24 +15,23 @@
 }
 
 #background-color {
- // background-image: url("https://cdn.shutterstock.com/shutterstock/videos/5867618/thumb/1.jpg");
+ // background-image: url("https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
  background-size: cover;
  background-color: #27282b;
  opacity: 0.9;
 }
 
-.country-buttons img {
-  width: 80px;
-  height: 80px;
-  display: inline;
-  margin-right:-80px;
-  margin-bottom: 20px;
-  text-align: center;
-  top:200px;
-  position: relative;
-  margin-left: 23%;
-  vertical-align: middle;
+.country-buttons {
+  max-width: 90%;
+  display: inline-block;
+  margin-left:20%;
+  margin-right:20%;
+  margin-top: 190px;
   }
+
+  .country-buttons img {
+    width: 60px;
+    }
 
 .country-buttons a:hover {
   border-bottom: none;
@@ -40,7 +39,7 @@
 
 
 /*RESPONSIVENESS*/
-@media (max-width: 750px) {
+@media (max-width: 650px) {
 
   h1 {
     font-family: 'Archivo Black', sans-serif;
@@ -49,12 +48,11 @@
     text-shadow: 0px 0px .5px #4deee2;
   }
   .country-buttons img {
-    width: 60px;
     height: 60px;
     top:230px;
     display: inline-block;
-    margin-right:-10px;
-    vertical-align: middle;
+    margin-left:10%;
+    margin-right: 10%;
     }
 }
 

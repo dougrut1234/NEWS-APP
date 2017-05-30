@@ -20,6 +20,9 @@
 
 <!-- PRAVDA  -->
 
+<div class="news-feeds">
+<%= image_tag ('pravda-logo.png'), :class => "news-feed-logo" %>
+
 <?xml version="1.0"?>
 <?xml-stylesheet href="application.css"?>
 
@@ -36,11 +39,8 @@
   <p><%= item.pubDate %> </p>
   <p><%= item.description %></p>
 
-<!-- <ul>
-    <li class="title"><%= puts "Title: #{feed.channel.title}" %></li>
-    <li class="item"><%=  puts "Item: #{item.title}" %></li>
-</ul> -->
-
   <%  end %>
 <%  end %>
 </xml>
+
+</div>

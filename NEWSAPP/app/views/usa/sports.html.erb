@@ -18,7 +18,39 @@
 
 <h1 class = "category"> United States: Sports News </h1>
 
+<!-- CBS  -->
+
+<div class="news-feeds">
+<%= image_tag ('cbs_logo.png'), :class => "news-feed-logo" %>
+
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.huffingtonpost.com/feeds/verticals/sports/index.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
+
+
 <!-- ESPN widget  -->
+
+<div class="news-feeds">
+<%= image_tag ('espn-logo.jpg'), :class => "news-feed-logo" %>
+
 
 <?xml version="1.0"?>
 <?xml-stylesheet href="application.css"?>
@@ -44,3 +76,59 @@
   <%  end %>
 <%  end %>
 </xml>
+
+</div>
+
+
+<!-- FOX SPORTS  -->
+
+<div class="news-feeds">
+<%= image_tag ('fox-news.png'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('https://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
+
+
+<!-- HUFFINGTON POST -->
+
+<div class="news-feeds">
+<%= image_tag ('huffpost.png'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.huffingtonpost.com/feeds/verticals/sports/index.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>

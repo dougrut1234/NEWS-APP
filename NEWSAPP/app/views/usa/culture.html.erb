@@ -20,6 +20,8 @@
 
 
 <!-- CNN  -->
+<div class="news-feeds">
+<%= image_tag ('cnn-logo.png'), :class => "news-feed-logo" %>
 
 <?xml version="1.0"?>
 <?xml-stylesheet href="application.css"?>
@@ -44,3 +46,84 @@
   <%  end %>
 <%  end %>
 </xml>
+
+</div>
+
+<!-- HUFFINGTON POST -->
+
+<div class="news-feeds">
+<%= image_tag ('huffpost.png'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.huffingtonpost.com/feeds/verticals/arts/index.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
+
+
+
+<!-- NY TIMES -->
+
+<div class="news-feeds">
+<%= image_tag ('nytimes_logo.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://rss.nytimes.com/services/xml/rss/nyt/Arts.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+</div>
+
+<!-- WSJ -->
+
+<div class="news-feeds">
+<%= image_tag ('wsj-logo.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.wsj.com/xml/rss/3_7201.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>

@@ -6,26 +6,25 @@
 </div>
 
 <body id="background-color">
-
+<center>
   <h1 id="home-title">READ. <span id="emphasis">LOCAL.</span> NEWS.</h1>
-
+<p class="summary"> A <em id="cross"> Cross-Comparitive </em> Tool: All RSS feeds are sourced <span id="underline">by country</span> </p>
   <div class="country-buttons">
-
-    <%= link_to image_tag('china.png'), "/china" %>
-    <%= link_to image_tag('egypt.png'), "/egypt"  %>
-    <%= link_to image_tag('france.png'), "/france" %>
-    <div>
-    </div>
-    <%= link_to image_tag('russia.png'), "/russia" %>
-    <%= link_to image_tag('usa.png'), "/usa"  %>
-    <%= link_to image_tag('venezuela.png'), "/venezuela" %>
-
+    <ul>
+    <li><%= link_to image_tag('china.png'), "/china" %></li>
+    <li><%= link_to image_tag('egypt.png'), "/egypt"  %></li>
+    <li><%= link_to image_tag('france.png'), "/france" %></li>
+    <li><%= link_to image_tag('russia.png'), "/russia" %></li>
+    <li><%= link_to image_tag('usa.png'), "/usa"  %></li>
+    <li><%= link_to image_tag('venezuela.png'), "/venezuela" %></li>
+  </ul>
   </div>
 
-  <p class="summary"> A <em id="cross"> Cross-Comparitive </em> Tool: All RSS feeds are sourced <span id="underline">by country</span> </p>
+<p> A <em id="cross"> Cross-Comparitive </em> Tool: All RSS feeds are sourced <span id="underline">by country</span> </p>
+<h1>READ. <span id="emphasis">LOCAL.</span> NEWS.</h1>
 
-<style>
-  /*.earth{
+<!-- /*<style>
+  .earth{
     position:absolute;
     top:320px;
     left:0;
@@ -33,23 +32,23 @@
     margin:auto;
     width: 300px;
     height: 300px;
-    background-image:url(https://images.gr-assets.com/hostedimages/1380432794ra/870513.gif);
+    background-image:url(http://flatplanet.sourceforge.net/maps/images/earthmap_hires.jpg);
     border-radius:50%;
     background-size:cover;
     box-shadow:-20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
-    animation: spin 30s linear alternate infinite;
+    animation: spin 30s linear infinite;
     -webkit-transform:rotate
-  }*/
+  }
 
   @keyframes spin{
     100%{background-position:100%;}
-  }
+  }*/ -->
 
 
 
-</style>
+<!-- </style> -->
 
 <div class="earth"> </div>
 
-
+</center>
 </body>
