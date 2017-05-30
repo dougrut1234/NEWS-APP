@@ -2,11 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  color:#fff;
-  text-align: center;
-}
-
 #home-border {
   border-bottom: 2px solid #fff;
   box-shadow: 2px 2px 5px #888888;
@@ -19,97 +14,47 @@ h1 {
   top:0px;
 }
 
-.landing-page-buttons {
-  display:inline;
-}
-
 #background-color {
- background-color: url("IMG_3693")
+ // background-image: url("https://cdn.shutterstock.com/shutterstock/videos/5867618/thumb/1.jpg");
+ background-size: cover;
+ background-color: #27282b;
+ opacity: 0.9;
 }
 
-.country-buttons {
-    position: relative;
-    width: 30em;
-    height: 20em;
-    padding: 3.0em;
-    margin: 1.75em auto 0;
+.country-buttons img {
+  width: 80px;
+  height: 80px;
+  display: inline;
+  margin-right:-80px;
+  margin-bottom: 20px;
+  text-align: center;
+  top:200px;
+  position: relative;
+  margin-left: 23%;
+  vertical-align: middle;
   }
 
-.country-buttons a {
-    display: block;
-    position: absolute;
-    top: 45%; left: 50%;
-    width: 4em; height: 4em;
-    margin: -2em;
-}
-
 .country-buttons a:hover {
-  border: none;
+  border-bottom: none;
 }
-
-
-#china-button-home img {
-  display: block;
-  height: 75px;
-  width: 75px;
-  transform: translate(14em);
-  display: block;
-}
-
-#egypt-button-home img {
-  height: 75px;
-  width: 75px;
-  transform: rotate(45deg) translate(14em) rotate(-45deg);
-  display: block;
-}
-
-#france-button-home img {
-  height: 75px;
-  width: 75px;
-  transform: rotate(135deg) translate(14em) rotate(-135deg);
-  display: block;
-}
-
-#russia-button-home img {
-  height: 75px;
-  width: 75px;
-  display: block;
-  transform: translate(-14em);
-}
-
-#usa-button-home img {
-  height: 75px;
-  width: 75px;
-  display: block;
-  transform: rotate(225deg) translate(14em) rotate(-225deg);
-}
-
-#venezuela-button-home img {
-  height: 75px;
-  width: 75px;
-  display: block;
-  transform: rotate(315deg) translate(14em) rotate(-315deg);
-}
-
 
 /*RESPONSIVENESS*/
 @media (max-width: 750px) {
 
-  div.country-buttons {
-    float:left;
-    padding-right:40px;
-  }
-
-  body#background-color {
-    background-color: #fff;
-}
-
   h1 {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color:#d6283f;
     text-shadow: 0px 0px .5px #4deee2;
   }
+  .country-buttons img {
+    width: 60px;
+    height: 60px;
+    top:230px;
+    display: inline-block;
+    margin-right:-10px;
+    vertical-align: middle;
+    }
 }
 
 
@@ -117,6 +62,10 @@ h1 {
   img {
     width: 12%;
     padding-left: 70px;
+  }
+
+  h1 {
+    font-size: 20px;
   }
 
 }

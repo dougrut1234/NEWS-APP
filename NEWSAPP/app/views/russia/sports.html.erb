@@ -17,3 +17,17 @@
    </header>
 
 <h1 class = "category"> Russia: Sports News </h1>
+
+<!-- PRAVDA  -->
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<%= open(url) do |rss| %>
+
+<%= feed = RSS::Parser.parse('http://www.pravdareport.com/sports/export-articles.xml',false) %>
+
+<%= feed.items.each do |item| %>
+    <%= puts "Title: #{feed.channel.title}" %>
+    <%=  puts "Item: #{item.title}" %>
+  <%  end %>
+<%  end %>
