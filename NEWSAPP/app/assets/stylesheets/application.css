@@ -138,9 +138,24 @@ h1 {
 
    img.rank {
      float:left;
+     height:100px;
+     display: inline;
    }
 
+   .title {
+     font-size: 24px;
+   }
 
+   .item {
+     font-size: 12px;
+   }
+
+   .news-logo {
+     top:200px;
+     height: 150px;
+     width: 150px;
+     display: block;
+   }
 
  /*RESPONSIVENESS*/
  @media (max-width: 800px) {

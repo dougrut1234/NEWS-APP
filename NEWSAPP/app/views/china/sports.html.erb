@@ -9,23 +9,37 @@
        <li><%= link_to "World",   '/china/world' %></li>
        <li><%= link_to "Business", '/china/business' %></li>
        <li><%= link_to "Sports", '/china/sports' %></li>
-       <li><%= link_to "Technlogy", '/china/tech' %></li>
+       <li><%= link_to "Science & Tech", '/china/tech' %></li>
        <li><%= link_to "Culture", '/china/culture' %></li>
      </ul>
    </div>
-
+``
 <h1 class = "category"> China: Sports News </h1>
+
 
 <!-- china daily  -->
 
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
 <% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
 
-<%= open(url) do |rss| %>
+<% open(url) do |rss| %>
 
-<%= feed = RSS::Parser.parse('http://www.chinadaily.com.cn/rss/sports_rss.xml',false) %>
+<% feed = RSS::Parser.parse('http://www.chinadaily.com.cn/rss/sports_rss.xml',false) %>
 
-<%= feed.items.each do |item| %>
-    <%= puts "Title: #{feed.channel.title}" %>
-    <%=  puts "Item: #{item.title}" %>
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+  <p><%= item.description %></p>
+
+<!-- <ul>
+    <li class="title"><%= puts "Title: #{feed.channel.title}" %></li>
+    <li class="item"><%=  puts "Item: #{item.title}" %></li>
+</ul> -->
+
   <%  end %>
 <%  end %>
+</xml>

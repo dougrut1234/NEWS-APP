@@ -9,7 +9,7 @@
        <li><%= link_to "World",   'china/world' %></li>
        <li><%= link_to "Business", 'china/business' %></li>
        <li><%= link_to "Sports", 'china/sports' %></li>
-       <li><%= link_to "Technlogy", 'china/tech' %></li>
+       <li><%= link_to "Science & Tech", 'china/tech' %></li>
        <li><%= link_to "Culture", 'china/culture' %></li>
      </ul>
    </div>
@@ -18,6 +18,10 @@
 
    <body>
      <h1 class="country-title"> China <span id="china">(People's Republic of China)</span> </h1>
-     <%= image_tag ('china-map.jpg'), :class => "map" %>
      <%= image_tag ('china-rank.jpg'), :class => "rank" %>
+     <%= image_tag ('china-map.jpg'), :class => "map" %>
+     <div class="news-logo-div">
+    <p>Publications Currently Represented: </p>
+     <%= image_tag ('china-daily.jpg'), :class => "news-logo" %>
+   </div>
    </body>

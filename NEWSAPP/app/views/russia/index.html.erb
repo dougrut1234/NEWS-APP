@@ -9,7 +9,7 @@
        <li><%= link_to "World",   'russia/world' %></li>
        <li><%= link_to "Business", 'russia/business' %></li>
        <li><%= link_to "Sports", 'russia/sports' %></li>
-       <li><%= link_to "Technlogy", 'russia/tech' %></li>
+       <li><%= link_to "Science & Tech", 'russia/tech' %></li>
        <li><%= link_to "Culture", 'russia/culture' %></li>
      </ul>
      </div>
@@ -18,7 +18,10 @@
 
    <body>
      <h1 class="country-title"> Russia </h1>
-     <%= image_tag ('russia-map.jpg'), :class => "map" %>
      <%= image_tag ('russia-rank.jpg'), :class => "rank" %>
-
+     <%= image_tag ('russia-map.jpg'), :class => "map" %>
+     <div class="news-logo-div">
+    <p>Publications Currently Represented: </p>
+    <%= image_tag ('pravda-logo.png'), :class => "news-logo" %>
+    </div>
    </body>
