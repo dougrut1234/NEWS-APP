@@ -16,29 +16,15 @@
 
    </header>
 
-<h1 class = "category"> United States: Domestic News </h1>
+<h1 class = "category"> United States: Sports News </h1>
 
-<!-- CNN widget  -->
-
-<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
-
-<%= open(url) do |rss| %>
-
-<%= feed = RSS::Parser.parse('http://rss.cnn.com/rss/cnn_us.rss',false) %>
-
-<%= feed.items.each do |item| %>
-    <%= puts "Title: #{feed.channel.title}" %>
-    <%=  puts "Item: #{item.title}" %>
-  <%  end %>
-<%  end %>
-
-<!-- CNN widget  -->
+<!-- ESPN widget  -->
 
 <% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
 
 <%= open(url) do |rss| %>
 
-<%= feed = RSS::Parser.parse('http://rss.cnn.com/rss/cnn_us.rss',false) %>
+<%= feed = RSS::Parser.parse('http://www.espn.com/espn/rss/news',false) %>
 
 <%= feed.items.each do |item| %>
     <%= puts "Title: #{feed.channel.title}" %>

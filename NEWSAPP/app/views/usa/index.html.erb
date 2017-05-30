@@ -1,13 +1,20 @@
-<header class="navbar  navbar-inverse">
+<header class="logo">
+  <%= link_to image_tag('logo.jpg'), "/" %>
+</header>
+
+<header class="navbar">
    <div class="navbar-class">
-     <div class="container">
-       <li><%= link_to "Domestic",   '#' %></li>
-       <li><%= link_to "World",   '#' %></li>
-       <li><%= link_to "Business", '#' %></li>
-       <li><%= link_to "Sports", '#' %></li>
-       <li><%= link_to "Technlogy", '#' %></li>
-       <li><%= link_to "Culture", '#' %></li>
+     <ul>
+       <li><%= link_to "Domestic",   'usa/domestic' %></li>
+       <li><%= link_to "World",   'usa/world' %></li>
+       <li><%= link_to "Business", 'usa/business' %></li>
+       <li><%= link_to "Sports", 'usa/sports' %></li>
+       <li><%= link_to "Technlogy", 'usa/tech' %></li>
+       <li><%= link_to "Culture", 'usa/culture' %></li>
+     </ul>
      </div>
-   </div>
 
    </header>
+<body>
+  <h1 class="country-title"> United States </div>
+</body>

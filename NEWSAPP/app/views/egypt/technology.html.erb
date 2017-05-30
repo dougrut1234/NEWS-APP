@@ -1,0 +1,33 @@
+<header class="logo">
+  <%= link_to image_tag('logo.jpg'), "/" %>
+</header>
+
+<header class="navbar">
+   <div class="navbar-class">
+     <ul>
+       <li><%= link_to "Domestic", '/egypt/domestic' %></li>
+       <li><%= link_to "World",  '/egypt/world' %></li>
+       <li><%= link_to "Business", '/egypt/business' %></li>
+       <li><%= link_to "Sports", '/egypt/sports' %></li>
+       <li><%= link_to "Technlogy", '/egypt/tech' %></li>
+       <li><%= link_to "Culture", '/egypt/culture' %></li>
+     </ul>
+     </div>
+
+   </header>
+
+<h1 class = "category"> Egypt: Tech News </h1>
+
+<!-- Egypt Today -->
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<%= open(url) do |rss| %>
+
+<%= feed = RSS::Parser.parse('http://www.egypt-today.com/science/rss.xml',false) %>
+
+<%= feed.items.each do |item| %>
+    <%= puts "Title: #{feed.channel.title}" %>
+    <%=  puts "Item: #{item.title}" %>
+  <%  end %>
+<%  end %>

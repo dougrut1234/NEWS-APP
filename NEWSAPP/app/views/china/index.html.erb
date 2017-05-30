@@ -1,13 +1,21 @@
-<header class="navbar  navbar-inverse">
+<header class="logo">
+  <%= link_to image_tag('logo.jpg'), "/" %>
+</header>
+
+<header class="navbar ">
    <div class="navbar-class">
-     <div class="container">
-       <li><%= link_to "Domestic",   '#' %></li>
-       <li><%= link_to "World",   '#' %></li>
-       <li><%= link_to "Business", '#' %></li>
-       <li><%= link_to "Sports", '#' %></li>
-       <li><%= link_to "Technlogy", '#' %></li>
-       <li><%= link_to "Culture", '#' %></li>
-     </div>
+     <ul>
+       <li><%= link_to "Domestic",   'china/domestic' %></li>
+       <li><%= link_to "World",   'china/world' %></li>
+       <li><%= link_to "Business", 'china/business' %></li>
+       <li><%= link_to "Sports", 'china/sports' %></li>
+       <li><%= link_to "Technlogy", 'china/tech' %></li>
+       <li><%= link_to "Culture", 'china/culture' %></li>
+     </ul>
    </div>
 
    </header>
+
+   <body>
+     <h1 class="country-title"> China <span id="china">(People's Republic of China)</span> </h1>
+   </body>

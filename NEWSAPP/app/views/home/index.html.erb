@@ -1,8 +1,69 @@
-<h1>Welcome</h1>
-<p>Select the country you would like to read about: </p>
-<%= link_to image_tag('China.jpg'), "/china" %>
-<%= link_to image_tag('france.jpg'), "/france" %>
-<%= link_to image_tag('Russia.jpg'), "/russia"  %>
-<%= link_to image_tag('Saudi.jpg'), "/saudi-arabia"  %>
-<%= link_to image_tag('usa.jpg'), "/usa"  %>
-<%= link_to image_tag('venezuela.jpg'), "/venezuela"  %>
+<header class="home-logo">
+  <%= link_to image_tag('home-logo.jpg'), "/" %>
+</header>
+
+<div id="home-border">
+</div>
+
+<body id="background-color">
+
+  <h1>READ. <span id="emphasis">LOCAL.</span> NEWS.</h1>
+
+  <p class="summary"> A <em id="cross"> Cross-Comparitive </em> Tool: Each country's RSS feeds are sourced <span id="underline">for you.</span> </p>
+
+<style>
+  .earth{
+    position:absolute;
+    top:320px;
+    left:0;
+    right:0;
+    margin:auto;
+    width: 300px;
+    height: 300px;
+    background-image:url(https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s1600/1.jpg);
+    border-radius:50%;
+    background-size:cover;
+    box-shadow:-20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    -webkit-transform:rotate
+  }
+
+  @keyframes spin{
+    100%{background-position:100%;}
+  }
+
+
+
+</style>
+
+<div class="earth"> </div>
+
+<div class="country-buttons">
+
+  <div id="china-button-home">
+    <%= link_to image_tag('china.png'), "/china" %>
+  </div>
+
+  <div id="egypt-button-home">
+    <%= link_to image_tag('egypt.png'), "/egypt"  %>
+  </div>
+
+  <div id="france-button-home">
+    <%= link_to image_tag('france.png'), "/france" %>
+  </div>
+
+  <div id="russia-button-home">
+    <%= link_to image_tag('russia.png'), "/russia" %>
+  </div>
+
+  <div id="usa-button-home">
+    <%= link_to image_tag('usa.png'), "/usa"  %>
+  </div>
+
+<div id="venezuela-button-home">
+  <%= link_to image_tag('venezuela.png'), "/venezuela" %>
+  </div>
+
+</div>
+
+</body>

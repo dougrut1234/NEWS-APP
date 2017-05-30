@@ -5,26 +5,27 @@
 <header class="navbar">
    <div class="navbar-class">
      <ul>
-       <li><%= link_to "Domestic",   '/usa/domestic' %></li>
-       <li><%= link_to "World",   '/usa/world' %></li>
-       <li><%= link_to "Business", '/usa/business' %></li>
-       <li><%= link_to "Sports", '/usa/sports' %></li>
-       <li><%= link_to "Technlogy", '/usa/tech' %></li>
-       <li><%= link_to "Culture", '/usa/culture' %></li>
+       <li><%= link_to "Domestic", '/egypt/domestic' %></li>
+       <li><%= link_to "World",  '/egypt/world' %></li>
+       <li><%= link_to "Business", '/egypt/business' %></li>
+       <li><%= link_to "Sports", '/egypt/sports' %></li>
+       <li><%= link_to "Technlogy", '/egypt/tech' %></li>
+       <li><%= link_to "Culture", '/egypt/culture' %></li>
      </ul>
      </div>
 
    </header>
 
-<h1 class = "category"> United States: Domestic News </h1>
+<h1 class = "category"> Egypt: Domestic News</h1>
 
-<!-- CNN widget  -->
+
+<!-- Daily News Egypt  -->
 
 <% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
 
 <%= open(url) do |rss| %>
 
-<%= feed = RSS::Parser.parse('http://rss.cnn.com/rss/cnn_us.rss',false) %>
+<%= feed = RSS::Parser.parse('http://www.dailynewsegypt.com/feed/',false) %>
 
 <%= feed.items.each do |item| %>
     <%= puts "Title: #{feed.channel.title}" %>
@@ -32,13 +33,13 @@
   <%  end %>
 <%  end %>
 
-<!-- CNN widget  -->
+<!-- Egypt Today -->
 
 <% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
 
 <%= open(url) do |rss| %>
 
-<%= feed = RSS::Parser.parse('http://rss.cnn.com/rss/cnn_us.rss',false) %>
+<%= feed = RSS::Parser.parse('http://www.egypt-today.com/egypt-breakingnews/rss.xml',false) %>
 
 <%= feed.items.each do |item| %>
     <%= puts "Title: #{feed.channel.title}" %>
