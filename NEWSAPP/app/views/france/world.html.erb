@@ -15,8 +15,40 @@
      </div>
 
    </header>
-
+<center>
 <h1 class = "category"> France: World News </h1>
+
+<!-- LE MONDE  -->
+
+<div class="news-feeds">
+<%= image_tag ('lefigaro.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.lefigaro.fr/rss/figaro_international.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link, :target => "_blank"  %></h2>
+  <p><%= item.pubDate %> </p>
+  <p><%= item.description %></p>
+
+<!-- <ul>
+    <li class="title"><%= puts "Title: #{feed.channel.title}" %></li>
+    <li class="item"><%=  puts "Item: #{item.title}" %></li>
+</ul> -->
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
 
 <!-- LE MONDE  -->
 
@@ -35,7 +67,7 @@
 <% puts "feed", feed.inspect %>
 <% feed.items.each do |item| %>
   <% puts "item", item.inspect %>
-  <h2><%= link_to item.title,item.link  %></h2>
+  <h2><%= link_to item.title,item.link, :target => "_blank"  %></h2>
   <p><%= item.pubDate %> </p>
   <p><%= item.description %></p>
 
@@ -49,3 +81,5 @@
 </xml>
 
 </div>
+
+</center>

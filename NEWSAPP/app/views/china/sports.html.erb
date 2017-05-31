@@ -13,7 +13,9 @@
        <li><%= link_to "Culture", '/china/culture' %></li>
      </ul>
    </div>
-``
+
+<center>
+
 <h1 class = "category"> China: Sports News </h1>
 
 
@@ -48,3 +50,35 @@
 <%  end %>
 </xml>
 </div>
+
+<!-- shanghai daily  -->
+
+<div class="news-feeds">
+<li><%= image_tag ('shanghai-daily.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://rss.shanghaidaily.com/Portal/mainSite/Handler.ashx?i=6',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+  <p><%= item.description %></p>
+
+<!-- <ul>
+    <li class="title"><%= puts "Title: #{feed.channel.title}" %></li>
+    <li class="item"><%=  puts "Item: #{item.title}" %></li>
+</ul> -->
+
+  <%  end %>
+<%  end %>
+</xml>
+</div>
+</center>

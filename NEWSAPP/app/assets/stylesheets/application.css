@@ -14,60 +14,33 @@
  *= require_self
  */
 
- #home-title {
-   font-family: 'Righteous', cursive;
-   font-size: 50px;
-   color:#fff;
-   text-shadow: 0px 0px .5px #fff;
-   text-align: center;
-   position: fixed;
-   width: 100%;
-   vertical-align: middle;
-   top: 140px;
- }
-
-.summary {
-  text-align: center;
-  /*color: #4deee2;*/
-  color:#fff;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
-  position: absolute;
-  top: 230px;
-  width: 100%;
-  vertical-align: middle;
-}
-
-#emphasis {
-  color:#d6283f;
-  font-family:'Poiret One', cursive;
-}
-
-#underline {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: #d6283f;
-}
-#cross {
-  text-shadow: 0px 0px .5px #4deee2;
-  color:#4deee2;
-}
-.category {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
-  color:#27282b;
-  text-transform: uppercase;
-  top:20px;
-  margin-top: -30px;
-}
-
 h1.country-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   color:#d6283f;
-  vertical-align: middle;
   text-transform: uppercase;
   margin-top: -30px;
+  display: block;
+}
+
+img.rank {
+  width: 150px;
+  float:right;
+  display: inline-block;
+  margin-top: -5%;
+}
+
+.country-title-container {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+img.map {
+  width:500px;
+  height:500px;
+  margin-top: 1.5%;
 }
 
 h1 {
@@ -98,7 +71,7 @@ h2 {
    text-align: center;
    height:38px;
    position: relative;
-   top:-60px;
+   top:-80px;
    /*opacity: .8;*/
    /*box-shadow: 2px 3px 5px #272828;*/
 
@@ -142,16 +115,6 @@ h2 {
 }
 
 
-img.map {
-   float: left;
-   text-align: center;
-   width: 30%;
-}
-
-img.rank {
-  float:right;
-}
-
    .title {
      font-size: 24px;
    }
@@ -175,12 +138,13 @@ img.rank {
    div.news-feeds {
      margin-top: 20px;
      height:450px;
+     padding: 15px;
      width: 240px;
      overflow-y: scroll;
      display: inline-block;
      outline-color: #27282b;
      overflow: -moz-scrollbars-vertical;
-     margin-right: 60px;
+     margin: 0 15px;
      /*border-radius:30px;*/
      /*opacity: 0.75;*/
      text-align: center;

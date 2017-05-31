@@ -15,8 +15,39 @@
      </div>
 
    </header>
-
+<center>
 <h1 class = "category"> Venezuela: Domestic News </h1>
+
+<!-- EL UNIVERSO -->
+<div class="news-feeds">
+<%= image_tag ('el-universo.jpg'), :class => "news-feed-logo" %>
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="application.css"?>
+
+<% url='http://www.ruby-lang.org/en/feeds/news.rss' %>
+
+<% open(url) do |rss| %>
+
+<% feed = RSS::Parser.parse('http://www.eluniverso.com/rss/politica.xml',false) %>
+
+<% puts "feed", feed.inspect %>
+<% feed.items.each do |item| %>
+  <% puts "item", item.inspect %>
+  <h2><%= link_to item.title,item.link  %></h2>
+  <p><%= item.pubDate %> </p>
+  <p><%= item.description %></p>
+
+<!-- <ul>
+    <li class="title"><%= puts "Title: #{feed.channel.title}" %></li>
+    <li class="item"><%=  puts "Item: #{item.title}" %></li>
+</ul> -->
+
+  <%  end %>
+<%  end %>
+</xml>
+
+</div>
 
 <!-- GUIA.VE  -->
 
@@ -50,3 +81,4 @@
 </xml>
 
 </div>
+</center>
